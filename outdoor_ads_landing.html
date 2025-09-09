@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Наружная реклама — Печать и монтаж</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Доп. мелкие правки для Tailwind */
+    :root{--accent:#ffb400}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    .gradient-hero{background-image:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1950&q=80'); background-position:center; background-size:cover}
+    .glass{backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.6)}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="fixed w-full z-40 bg-white/60 backdrop-blur-md shadow-sm">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4 md:p-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold">AR</div>
+        <div>
+          <div class="font-semibold text-gray-800">Outdoor Ads</div>
+          <div class="text-xs text-gray-500">Печать • Монтаж • Дизайн</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm text-gray-700">
+        <a href="#services" class="hover:text-gray-900">Услуги</a>
+        <a href="#works" class="hover:text-gray-900">Работы</a>
+        <a href="#prices" class="hover:text-gray-900">Цены</a>
+        <a href="#form" class="px-4 py-2 bg-yellow-400 rounded-full font-semibold shadow hover:opacity-95">Заказать</a>
+      </nav>
+
+      <button id="burger" class="md:hidden p-2">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="gradient-hero min-h-screen flex items-center" style="padding-top:72px;">
+    <div class="max-w-6xl mx-auto px-6 py-20 lg:py-32 text-white">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" style="font-family: Montserrat, Inter;">Наружная реклама в Алматы — быстро и заметно</h1>
+          <p class="text-lg md:text-xl text-gray-100/90 mb-6">Печать баннеров, изготовление и монтаж билбордов, оформление фасадов. От макета до установки — под ключ.</p>
+          <div class="flex gap-3">
+            <a href="#form" class="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-3 rounded-full shadow">Получить расчет</a>
+            <a href="#works" class="inline-flex items-center gap-2 border border-white/30 px-4 py-3 rounded-full">Смотреть работы</a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-3 gap-3 text-sm text-gray-200">
+            <div class="flex flex-col">
+              <span class="font-semibold">Собственное производство</span>
+              <span class="text-gray-200/80">Сроки от 1 дня</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-semibold">Гарантия</span>
+              <span class="text-gray-200/80">На материалы и монтаж</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-semibold">Доставка</span>
+              <span class="text-gray-200/80">По Алматы и области</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80" alt="banner" class="w-full h-[420px] object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Наши услуги</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-white shadow">
+        <div class="text-xl font-semibold mb-2">Печать баннеров</div>
+        <p class="text-gray-600 mb-4">Плотная ткань, сварные швы, люверсы любой частоты.</p>
+        <ul class="text-sm text-gray-500">
+          <li>Ширина до 5м</li>
+          <li>УФ-стойкая печать</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white shadow">
+        <div class="text-xl font-semibold mb-2">Монтаж</div>
+        <p class="text-gray-600 mb-4">Опытные монтажники, соблюдение техники безопасности.</p>
+        <ul class="text-sm text-gray-500">
+          <li>Монтаж на фасад</li>
+          <li>Установка на щиты и мачты</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white shadow">
+        <div class="text-xl font-semibold mb-2">Дизайн и макеты</div>
+        <p class="text-gray-600 mb-4">Быстрая подготовка макетов под печать.</p>
+        <ul class="text-sm text-gray-500">
+          <li>Подготовка под формат печати</li>
+          <li>Адаптация под монтаж</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works / Portfolio -->
+  <section id="works" class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Наши работы</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow hover:scale-105 transform transition"> <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80" alt="work1" class="w-full h-56 object-cover"/> </div>
+        <div class="rounded-2xl overflow-hidden shadow hover:scale-105 transform transition"> <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" alt="work2" class="w-full h-56 object-cover"/> </div>
+        <div class="rounded-2xl overflow-hidden shadow hover:scale-105 transform transition"> <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=80" alt="work3" class="w-full h-56 object-cover"/> </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="#form" class="inline-block px-6 py-3 bg-black text-white rounded-full font-semibold">Заказать бесплатный расчет</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prices quick -->
+  <section id="prices" class="max-w-4xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold text-center mb-6">Примерные цены</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="p-4 bg-white rounded-lg shadow text-center">
+        <div class="font-semibold">Баннер 3x2 м</div>
+        <div class="text-2xl font-bold mt-2">6 000 ₸</div>
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow text-center">
+        <div class="font-semibold">Билборд 6x3 м</div>
+        <div class="text-2xl font-bold mt-2">35 000 ₸</div>
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow text-center">
+        <div class="font-semibold">Монтаж</div>
+        <div class="text-2xl font-bold mt-2">от 5 000 ₸</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="form" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Заказать расчет</h2>
+          <p class="text-gray-600 mb-6">Оставьте контакт — мы пришлем коммерческое предложение и ориентировочную стоимость.</p>
+
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <div class="flex items-center gap-3 text-sm text-gray-600">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.09 6.26L20 10l-5 3.64L16.18 20 12 16.9 7.82 20 9 13.64 4 10l5.91-1.74L12 2z" stroke="currentColor" stroke-width="0.5"/></svg>
+              <span>Сотрудничаем с компаниями любого размера</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="orderForm" class="bg-gradient-to-b from-gray-100 to-white p-6 rounded-2xl shadow">
+          <div class="grid gap-3">
+            <input name="name" type="text" placeholder="Ваше имя" class="p-3 border rounded" required>
+            <input name="phone" type="tel" placeholder="Телефон (WhatsApp/Telegram)" class="p-3 border rounded" required>
+            <select name="service" class="p-3 border rounded">
+              <option value="banner">Печать баннеров</option>
+              <option value="billboard">Билборды</option>
+              <option value="installation">Монтаж</option>
+              <option value="design">Дизайн макета</option>
+            </select>
+            <textarea name="comment" rows="4" placeholder="Комментарий (размер, адрес, сроки)" class="p-3 border rounded"></textarea>
+
+            <div class="flex items-center gap-3">
+              <button type="submit" class="flex-1 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 rounded">Отправить заявку</button>
+              <button type="button" id="phoneBtn" class="px-4 py-3 border rounded">Позвонить</button>
+            </div>
+
+            <p id="successMessage" class="hidden text-green-600 font-medium">✅ Заявка отправлена — спасибо! Мы свяжемся в ближайшее время.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="font-semibold text-white">Outdoor Ads</div>
+        <div class="text-sm text-gray-400 mt-2">Алматы, ул. Абая, 25<br/>Тел: +7 (777) 123-45-67</div>
+      </div>
+      <div>
+        <div class="font-semibold text-white">Рабочие часы</div>
+        <div class="text-sm text-gray-400 mt-2">Пн–Пт 9:00–18:00<br/>Сб 10:00–15:00</div>
+      </div>
+      <div>
+        <div class="font-semibold text-white">Соцсети</div>
+        <div class="flex gap-3 mt-3">
+          <a class="text-gray-400 hover:text-white">Instagram</a>
+          <a class="text-gray-400 hover:text-white">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: Telegram send + UI interactions -->
+  <script>
+    const TOKEN = "ВАШ_TELEGRAM_TOKEN"; // вставьте токен
+    const CHAT_ID = "ВАШ_CHAT_ID";     // вставьте chat_id
+    const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+    const form = document.getElementById('orderForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = data.get('name');
+      const phone = data.get('phone');
+      const service = data.get('service');
+      const comment = data.get('comment');
+
+      const text = `📢 Новая заявка:\n👤 ${name}\n☎️ ${phone}\n🛠 ${service}\n💬 ${comment}`;
+
+      try {
+        const res = await fetch(URL_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`
+        });
+
+        if (res.ok) {
+          successMessage.classList.remove('hidden');
+          form.reset();
+          setTimeout(()=> successMessage.classList.add('hidden'), 5000);
+        } else {
+          console.warn('Telegram error', res.status);
+          alert('Ошибка отправки — попробуйте позже');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Ошибка сети — проверьте подключение');
+      }
+    });
+
+    // Простая мобильная кнопка звонка
+    document.getElementById('phoneBtn').addEventListener('click', () => {
+      window.location.href = 'tel:+77771234567';
+    });
+
+    // Бургер меню (мобилка)
+    document.getElementById('burger').addEventListener('click', ()=>{
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
