@@ -18,28 +18,20 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
   <!-- Header -->
-  <header class="fixed w-full z-40 bg-white/60 backdrop-blur-md shadow-sm">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4 md:p-6">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-md bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold">AR</div>
-        <div>
-          <div class="font-semibold text-gray-800">Outdoor Ads</div>
-          <div class="text-xs text-gray-500">Печать • Монтаж • Дизайн</div>
-        </div>
-      </div>
+  <header class="w-full flex items-center justify-between px-6 py-4 bg-black text-white">
+  <!-- Логотип -->
+  <div class="flex items-center space-x-2">
+    <img src="photo_5332269131858310440_x.jpg" alt="ReklaPoint Logo" class="h-12 w-auto">
+    <span class="text-xl font-bold">ReklaPoint</span>
+  </div>
 
-      <nav class="hidden md:flex gap-6 items-center text-sm text-gray-700">
-        <a href="#services" class="hover:text-gray-900">Услуги</a>
-        <a href="#works" class="hover:text-gray-900">Работы</a>
-        <a href="#prices" class="hover:text-gray-900">Цены</a>
-        <a href="#form" class="px-4 py-2 bg-yellow-400 rounded-full font-semibold shadow hover:opacity-95">Заказать</a>
-      </nav>
-
-      <button id="burger" class="md:hidden p-2">
-        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-      </button>
-    </div>
-  </header>
+  <!-- Меню -->
+  <nav class="space-x-6 hidden md:flex">
+    <a href="#services" class="hover:text-yellow-400">Услуги</a>
+    <a href="#portfolio" class="hover:text-yellow-400">Портфолио</a>
+    <a href="#contacts" class="hover:text-yellow-400">Контакты</a>
+  </nav>
+</header>
 
   <!-- Hero -->
   <section class="gradient-hero min-h-screen flex items-center" style="padding-top:72px;">
