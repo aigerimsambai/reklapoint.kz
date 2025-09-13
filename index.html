@@ -34,41 +34,56 @@
 </header>
 
   <!-- Hero -->
-  <section class="gradient-hero min-h-screen flex items-center" style="padding-top:72px;">
-    <div class="max-w-6xl mx-auto px-6 py-20 lg:py-32 text-white">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" style="font-family: Montserrat, Inter;">Наружная реклама в Алматы — быстро и заметно</h1>
-          <p class="text-lg md:text-xl text-gray-100/90 mb-6">Печать баннеров, изготовление и монтаж билбордов, оформление фасадов. От макета до установки — под ключ.</p>
-          <div class="flex gap-3">
-            <a href="#form" class="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-3 rounded-full shadow">Получить расчет</a>
-            <a href="#works" class="inline-flex items-center gap-2 border border-white/30 px-4 py-3 rounded-full">Смотреть работы</a>
-          </div>
+  <section class="relative min-h-screen flex items-center" style="padding-top:72px;">
+  <!-- Фоновое видео -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="assets/video/banner.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
 
-          <div class="mt-8 grid grid-cols-3 gap-3 text-sm text-gray-200">
-            <div class="flex flex-col">
-              <span class="font-semibold">Собственное производство</span>
-              <span class="text-gray-200/80">Сроки от 1 дня</span>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-semibold">Гарантия</span>
-              <span class="text-gray-200/80">На материалы и монтаж</span>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-semibold">Доставка</span>
-              <span class="text-gray-200/80">По Алматы и области</span>
-            </div>
-          </div>
+  <!-- затемнение -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Контент -->
+  <div class="relative max-w-6xl mx-auto px-6 py-20 lg:py-32 text-white">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" style="font-family: Montserrat, Inter;">
+          Наружная реклама в Алматы — быстро и заметно
+        </h1>
+        <p class="text-lg md:text-xl text-gray-100/90 mb-6">
+          Печать баннеров, изготовление и монтаж билбордов, оформление фасадов. От макета до установки — под ключ.
+        </p>
+        <div class="flex gap-3">
+          <a href="#form" class="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-3 rounded-full shadow">Получить расчет</a>
+          <a href="#works" class="inline-flex items-center gap-2 border border-white/30 px-4 py-3 rounded-full">Смотреть работы</a>
         </div>
 
-        <div class="hidden md:block">
-          <div class="rounded-2xl overflow-hidden shadow-xl">
-            <img src="assets/images/letter-4.jpeg" alt="banner" class="w-full h-[420px] object-cover" />
+        <div class="mt-8 grid grid-cols-3 gap-3 text-sm text-gray-200">
+          <div class="flex flex-col">
+            <span class="font-semibold">Собственное производство</span>
+            <span class="text-gray-200/80">Сроки от 1 дня</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-semibold">Гарантия</span>
+            <span class="text-gray-200/80">На материалы и монтаж</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-semibold">Доставка</span>
+            <span class="text-gray-200/80">По Алматы и области</span>
           </div>
         </div>
       </div>
+
+      <!-- Можно оставить картинку вместо видео на десктопе -->
+      <div class="hidden md:block relative z-10">
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img src="assets/images/letter-4.jpeg" alt="banner" class="w-full h-[420px] object-cover" />
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Services -->
   <section id="services" class="max-w-6xl mx-auto px-6 py-16">
