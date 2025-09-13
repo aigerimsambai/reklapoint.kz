@@ -199,56 +199,61 @@
     </div>
   </footer>
 
-  <!-- Script: Telegram send + UI interactions -->
-  <script>
-    const TOKEN = "8450333670:AAGRnADFEAd1rjP2S-51MNjedar5CHs2ozM"; // вставьте токен
-    const CHAT_ID = "408614809";     // вставьте chat_id
-    const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+ <!-- Script: Telegram send + UI interactions -->
+<script>
+  const TOKEN = "8450333670:AAGRnADFEAd1rjP2S-51MNjedar5CHs2ozM"; // токен
+  const CHAT_ID = "408614809";  // твой chat_id
+  const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-    const form = document.getElementById('orderForm');
-    const successMessage = document.getElementById('successMessage');
+  const form = document.getElementById('orderForm');
+  const successMessage = document.getElementById('successMessage');
 
-    form.addEventListener('submit', async function(e){
-      e.preventDefault();
-      const data = new FormData(form);
-      const name = data.get('name');
-      const phone = data.get('phone');
-      const service = data.get('service');
-      const comment = data.get('comment');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = data.get('name');
+    const phone = data.get('phone');
+    const service = data.get('service');
+    const comment = data.get('comment');
 
-      const text = `📢 Новая заявка:\n👤 ${name}\n☎️ ${phone}\n🛠 ${service}\n💬 ${comment}`;
+    const text = `📢 Новая заявка:\n👤 ${name}\n☎️ ${phone}\n🛠 ${service}\n💬 ${comment}`;
 
-      try {
-        const res = await fetch(URL_API, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`
-        });
+    try {
+      const res = await fetch(URL_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: text,
+          parse_mode: "HTML"
+        })
+      });
 
-        if (res.ok) {
-          successMessage.classList.remove('hidden');
-          form.reset();
-          setTimeout(()=> successMessage.classList.add('hidden'), 5000);
-        } else {
-          console.warn('Telegram error', res.status);
-          alert('Ошибка отправки — попробуйте позже');
-        }
-      } catch (err) {
-        console.error(err);
-        alert('Ошибка сети — проверьте подключение');
+      if (res.ok) {
+        successMessage.classList.remove('hidden');
+        form.reset();
+        setTimeout(()=> successMessage.classList.add('hidden'), 5000);
+      } else {
+        console.warn('Telegram error', await res.text());
+        alert('Ошибка отправки — попробуйте позже');
       }
-    });
+    } catch (err) {
+      console.error(err);
+      alert('Ошибка сети — проверьте подключение');
+    }
+  });
 
-    // Простая мобильная кнопка звонка
-    document.getElementById('phoneBtn').addEventListener('click', () => {
-      window.location.href = 'tel:+77771234567';
-    });
+  // Простая мобильная кнопка звонка
+  document.getElementById('phoneBtn').addEventListener('click', () => {
+    window.location.href = 'tel:+77771234567';
+  });
 
-    // Бургер меню (мобилка)
-    document.getElementById('burger').addEventListener('click', ()=>{
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('hidden');
-    });
-  </script>
+  // Бургер меню (мобилка)
+  document.getElementById('burger').addEventListener('click', ()=>{
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('hidden');
+  });
+</script>
+
 </body>
 </html>
